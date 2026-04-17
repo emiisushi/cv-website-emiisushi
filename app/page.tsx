@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <div className="atmosphere-bg min-h-screen pb-14">
       <main className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-10">
-        <nav className="enter-up rounded-2xl border border-border/80 bg-[#0d1422] p-3 text-slate-200 shadow-sm">
+        <nav className="enter-up sticky top-3 z-30 rounded-2xl border border-border/80 bg-[#0d1422]/95 p-3 text-slate-200 shadow-sm backdrop-blur">
           <ul className="flex flex-wrap items-center justify-center gap-2 text-sm font-medium sm:gap-3 sm:text-base">
             {[
               { label: "About", href: "#about" },
@@ -55,7 +55,7 @@ export default function Home() {
           </ul>
         </nav>
 
-        <header className="enter-up sticky top-3 z-20 rounded-2xl border border-border/90 bg-card/85 p-4 shadow-sm backdrop-blur md:p-5">
+        <header className="enter-up rounded-2xl border border-border/90 bg-card/85 p-4 shadow-sm backdrop-blur md:p-5">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground">
