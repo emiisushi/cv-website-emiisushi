@@ -6,9 +6,8 @@ export const profile = {
   phone: "+63 995-262-2480",
   tagline:
     "Building modern interfaces with AI tools, thoughtful design systems, and reliable deployment workflows.",
-  bio: "I am a developer focused on turning ideas into polished web experiences. My current focus is AI-assisted product building with v0.dev, Next.js, and component-driven design. I enjoy working from fast prototypes to production-ready deployments, combining creative direction with engineering discipline.",
-  summary:
-    "I combine UI engineering skills with practical AI workflows to design and ship responsive products quickly. My goal is to grow into a product engineer who can lead both frontend architecture and user experience strategy.",
+  bio: "I'm an IT student at St. Paul University Philippines with a passion for full-stack web development and turning ideas into polished web experiences. My journey in tech started with a curiosity about how things work on the web, and has evolved into a commitment to building high-quality, user-centric applications - from fast prototypes to production-ready deployments. I specialize in creating responsive web applications using modern frameworks and technologies. With hands-on experience in Laravel, Next.js, Flutter, and v0.dev, I combine UI engineering skills with practical AI workflows to design and ship products quickly - blending creative direction with engineering discipline. My goal is to grow into a product engineer who can lead both frontend architecture and user experience strategy, contributing to open-source projects and sharing knowledge with the developer community along the way. When I'm not coding, I enjoy learning new technologies, exploring AI-assisted product building, and staying at the forefront of component-driven design.",
+
   social: {
     github: "https://github.com/emiisushi",
     linkedin: "https://www.linkedin.com/in/RexieVargas",
@@ -124,45 +123,30 @@ export const certificationsMemberships = [
 
 export const education = [
   {
-    title: "B.Sc. in Informatics (In Progress)",
-    organization: "University of Pembangunan Nasional Veteran Jawa Timur",
-    period: "2022 - Present",
+    title: "Bachelor in Science in Information Technology and Engineering (In Progress)",
+    organization: "University of Saint Paul University Philippines, Tuguegarao City",
+    period: "2021 - 2026",
     details: [
       "Relevant coursework: Human Computer Interaction, Web Development, Software Engineering, Data Structures.",
       "Focus area: frontend engineering and AI-enhanced development workflow.",
-    ],
-  },
-  {
-    title: "Certified Front-End Web Developer",
-    organization: "Dicoding Indonesia",
-    period: "2024",
-    details: [
-      "Completed capstone focused on accessibility and responsive web interfaces.",
     ],
   },
 ];
 
 export const projects = [
   {
-    name: "AI Generated CV Website",
-    stack: ["v0.dev", "Next.js 15", "Shadcn UI", "Vercel"],
+    name: "Flutter Soundboard",
+    stack: ["Flutter", "Dart", "Mobile UI"],
     description:
-      "Designed and generated the initial UI with v0.dev, then refined architecture, content structure, and theme behavior for production deployment.",
-    link: "https://your-vercel-url.vercel.app",
+      "A Flutter-based soundboard application focused on responsive layout, smooth interactions, and clean audio controls.",
+    link: "https://github.com/emiisushi/flutter-soundboard",
   },
   {
-    name: "StudyFlow Task Planner",
-    stack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
+    name: "Vargas Movie",
+    stack: ["Web Development", "JavaScript", "UI/UX"],
     description:
-      "A planner for students to prioritize assignments and monitor weekly study load with simple analytics.",
-    link: "https://github.com/emiisushi/studyflow",
-  },
-  {
-    name: "Campus Event Hub",
-    stack: ["React", "Tailwind CSS", "Firebase"],
-    description:
-      "A student event portal supporting organizer uploads, category filters, and registration tracking.",
-    link: "https://github.com/emiisushi/campus-event-hub",
+      "A movie-focused project showcasing content presentation, user-friendly navigation, and practical frontend implementation.",
+    link: "https://github.com/emiisushi/Vargas-movie",
   },
 ];
 
