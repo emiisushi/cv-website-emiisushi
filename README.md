@@ -1,11 +1,10 @@
-# AI-Generated CV Website (Next.js 15 + v0.dev)
+# Rexie's CV Website (Next.js 15 + v0.dev)
 
 A professional CV website generated with AI-assisted workflow, built using Next.js 15 and shadcn-style UI components, with a functional dark/light mode toggle and responsive profile sections.
 
 ## Live Submission Links
 - GitHub Repository: `https://github.com/emiisushi/cv-website-emiisushi`
-- Vercel Production URL: `https://your-vercel-url.vercel.app`
-- v0.dev Project Link: `https://v0.dev/chat/your-project-link`
+- Vercel Production URL: `https://cv-website-emiisushi-az9f.vercel.app/`
 
 Replace the placeholder links above with your real URLs before submitting.
 
