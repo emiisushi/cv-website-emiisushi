@@ -32,8 +32,8 @@ import {
 export default function Home() {
   return (
     <div className="atmosphere-bg min-h-screen pb-14">
-      <main className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-10">
-        <nav className="enter-up sticky top-3 z-30 rounded-2xl border border-border/80 bg-[#0d1422]/95 p-3 text-slate-200 shadow-sm backdrop-blur">
+      <div className="fixed inset-x-0 top-0 z-40 px-4 pt-3 sm:px-6 lg:px-10">
+        <nav className="enter-up mx-auto w-full max-w-6xl rounded-2xl border border-border/90 bg-card/90 p-3 text-foreground shadow-sm backdrop-blur">
           <ul className="flex flex-wrap items-center justify-center gap-2 text-sm font-medium sm:gap-3 sm:text-base">
             {[
               { label: "About", href: "#about" },
@@ -46,7 +46,7 @@ export default function Home() {
               <li key={item.label}>
                 <a
                   href={item.href}
-                  className="inline-flex rounded-lg px-3 py-1.5 text-slate-300 transition-colors hover:bg-white/10 hover:text-white"
+                  className="inline-flex rounded-lg px-3 py-1.5 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                 >
                   {item.label}
                 </a>
@@ -54,7 +54,9 @@ export default function Home() {
             ))}
           </ul>
         </nav>
+      </div>
 
+      <main className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 pb-6 pt-24 sm:px-6 sm:pt-24 lg:px-10 lg:pt-24">
         <header className="enter-up rounded-2xl border border-border/90 bg-card/85 p-4 shadow-sm backdrop-blur md:p-5">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
@@ -283,10 +285,10 @@ export default function Home() {
         </section>
 
         <section id="contact" className="enter-up delay-520">
-          <Card className="border-border/90 bg-[#142238]/90 text-slate-100">
+          <Card className="border-border/90 bg-card/90">
             <CardHeader>
-              <CardTitle className="text-white">Get in Touch</CardTitle>
-              <CardDescription className="text-slate-300">
+              <CardTitle>Get in Touch</CardTitle>
+              <CardDescription>
                 Send me a message for collaboration, internship opportunities, or project inquiries.
               </CardDescription>
             </CardHeader>
@@ -294,7 +296,7 @@ export default function Home() {
               <form className="space-y-4">
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="space-y-2">
-                    <label htmlFor="fullName" className="text-sm font-medium text-slate-200">
+                    <label htmlFor="fullName" className="text-sm font-medium text-foreground">
                       Full Name
                     </label>
                     <input
@@ -302,11 +304,11 @@ export default function Home() {
                       name="fullName"
                       type="text"
                       placeholder="Your name"
-                      className="w-full rounded-lg border border-slate-600/70 bg-slate-700/60 px-4 py-3 text-slate-100 placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--brand]"
+                      className="w-full rounded-lg border border-border/80 bg-background/70 px-4 py-3 text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--brand]"
                     />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="emailAddress" className="text-sm font-medium text-slate-200">
+                    <label htmlFor="emailAddress" className="text-sm font-medium text-foreground">
                       Email Address
                     </label>
                     <input
@@ -314,12 +316,12 @@ export default function Home() {
                       name="emailAddress"
                       type="email"
                       placeholder="Your email"
-                      className="w-full rounded-lg border border-slate-600/70 bg-slate-700/60 px-4 py-3 text-slate-100 placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--brand]"
+                      className="w-full rounded-lg border border-border/80 bg-background/70 px-4 py-3 text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--brand]"
                     />
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium text-slate-200">
+                  <label htmlFor="subject" className="text-sm font-medium text-foreground">
                     Subject
                   </label>
                   <input
@@ -327,11 +329,11 @@ export default function Home() {
                     name="subject"
                     type="text"
                     placeholder="Message subject"
-                    className="w-full rounded-lg border border-slate-600/70 bg-slate-700/60 px-4 py-3 text-slate-100 placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--brand]"
+                    className="w-full rounded-lg border border-border/80 bg-background/70 px-4 py-3 text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--brand]"
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium text-slate-200">
+                  <label htmlFor="message" className="text-sm font-medium text-foreground">
                     Message
                   </label>
                   <textarea
@@ -339,13 +341,10 @@ export default function Home() {
                     name="message"
                     rows={6}
                     placeholder="Your message"
-                    className="w-full resize-y rounded-lg border border-slate-600/70 bg-slate-700/60 px-4 py-3 text-slate-100 placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--brand]"
+                    className="w-full resize-y rounded-lg border border-border/80 bg-background/70 px-4 py-3 text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--brand]"
                   />
                 </div>
-                <Button
-                  type="submit"
-                  className="h-12 w-full bg-gradient-to-r from-blue-500 via-indigo-500 to-fuchsia-500 text-white hover:brightness-110"
-                >
+                <Button type="submit" className="h-12 w-full">
                   <Send className="mr-2 h-4 w-4" />
                   Send Message
                 </Button>
