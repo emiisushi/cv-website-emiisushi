@@ -51,7 +51,7 @@ export default function Home() {
             <CardContent className="space-y-4 p-6">
               <div className="mx-auto overflow-hidden rounded-xl border border-border/70 sm:mx-0">
                 <Image
-                  src="/headshot.svg"
+                  src="/profile.jpg"
                   alt="Professional headshot of Emi Isushi"
                   width={540}
                   height={540}
