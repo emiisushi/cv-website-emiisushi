@@ -1,9 +1,9 @@
 export const profile = {
-  name: "Emi Isushi",
+  name: "Rexie Margarette A. Vargas",
   role: "AI-Assisted Frontend Developer",
-  location: "Surabaya, Indonesia",
-  email: "emi.isushi.dev@gmail.com",
-  phone: "+62 812-3456-7890",
+  location: "Tuguegarao City, Philippines",
+  email: "emiisushi1603@gmail.com",
+  phone: "+63 995-262-2480",
   tagline:
     "Building modern interfaces with AI tools, thoughtful design systems, and reliable deployment workflows.",
   bio: "I am a developer focused on turning ideas into polished web experiences. My current focus is AI-assisted product building with v0.dev, Next.js, and component-driven design. I enjoy working from fast prototypes to production-ready deployments, combining creative direction with engineering discipline.",
@@ -11,7 +11,7 @@ export const profile = {
     "I combine UI engineering skills with practical AI workflows to design and ship responsive products quickly. My goal is to grow into a product engineer who can lead both frontend architecture and user experience strategy.",
   social: {
     github: "https://github.com/emiisushi",
-    linkedin: "https://www.linkedin.com/in/emiisushi",
+    linkedin: "https://www.linkedin.com/in/RexieVargas",
     portfolio: "https://emiisushi.dev",
   },
 };
@@ -41,35 +41,84 @@ export const skills = {
   ],
 };
 
-export const experiences = [
+export const seminarsAndConferences = [
   {
-    title: "Frontend Developer Intern",
-    organization: "NusaTech Digital",
-    period: "Jun 2025 - Sep 2025",
-    details: [
-      "Implemented reusable React components that reduced page assembly time for the marketing team.",
-      "Collaborated with a designer to standardize spacing, typography, and states across landing pages.",
-      "Improved Lighthouse performance scores by optimizing image rendering and layout shifts.",
-    ],
+    title: "IT Cybersecurity Roadshow",
+    date: "October 25, 2025",
+    location: "St. Paul University Philippines, Tuguegarao City",
+    description:
+      "A focused seminar on cybersecurity trends, threats, and best practices in IT systems.",
   },
   {
-    title: "University Project - Smart Campus Services Portal",
-    organization: "Informatics Program, Semester 5",
-    period: "Jan 2025 - May 2025",
-    details: [
-      "Built a role-based portal for student service requests with Next.js and Supabase authentication.",
-      "Designed a responsive dashboard with KPI cards and status tracking for service submissions.",
-      "Led frontend architecture and code reviews in a 4-person team.",
-    ],
+    title: "SITE Film Festival 2025",
+    date: "June 19, 2025",
+    location: "St. Paul University Philippines, Tuguegarao City",
+    description:
+      "Annual film festival celebrating creativity and storytelling within the IT and Engineering community.",
   },
   {
-    title: "Volunteer Web Mentor",
-    organization: "Local Coding Community",
-    period: "2024 - Present",
-    details: [
-      "Mentor beginner students in HTML, CSS, JavaScript, and Git basics through weekend sessions.",
-      "Created workshop mini-projects and code walkthrough materials for practical learning.",
-    ],
+    title: 'ITE Convention 2025 - "Innovate, Transform, Shaping a Smarter World"',
+    date: "March 26-28, 2025",
+    location: "St. Paul University Philippines, Tuguegarao City, Cagayan",
+    description:
+      "Multi-day convention showcasing innovations in information technology and engineering.",
+  },
+  {
+    title:
+      'ITE Convention 2024 - "Sustainable Energy: IT & Engineering for a Greener Tomorrow"',
+    date: "April 17-19, 2024",
+    location: "St. Paul University Philippines, Tuguegarao City, Cagayan",
+    description:
+      "Convention focused on sustainable technology and its integration with engineering practices.",
+  },
+];
+
+export const certificationsMemberships = [
+  {
+    title: "Certificate of Membership",
+    subtitle: "JPCS - SPUP Chapter",
+    year: "2025-2026",
+  },
+  {
+    title: "Certificate of Membership",
+    subtitle: "JPCS National",
+    year: "2025-2026",
+  },
+  {
+    title: "Certificate of Participation",
+    subtitle: "ITE Convention 2025 - Innovate, Transform, Shaping a Smarter World",
+    year: "2025",
+  },
+  {
+    title: "Certificate of Participation",
+    subtitle:
+      "ITE Convention 2024 - Sustainable Energy: IT & Engineering for a Greener Tomorrow",
+    year: "2024",
+  },
+  {
+    title: "Certificate of Participation",
+    subtitle: "IT Cybersecurity Roadshow",
+    year: "2025",
+  },
+  {
+    title: "Certificate of Participation",
+    subtitle: "SITE Film Festival 2025",
+    year: "2025",
+  },
+  {
+    title: "Certificate of Participation",
+    subtitle: "The Art of Filmmaking Workshop",
+    year: "2025",
+  },
+  {
+    title: "Certificate of Completion",
+    subtitle: "National Service Training Program (NSTP)",
+    year: "2025",
+  },
+  {
+    title: "Certificate of Participation",
+    subtitle: "CYBER SUMMIT 2023",
+    year: "2023",
   },
 ];
 

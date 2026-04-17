@@ -13,10 +13,11 @@ import {
 } from "@/components/ui/card";
 import {
   aiProcess,
+  certificationsMemberships,
   education,
-  experiences,
   profile,
   projects,
+  seminarsAndConferences,
   skills,
 } from "@/lib/profile-data";
 
@@ -154,24 +155,20 @@ export default function Home() {
         <section className="enter-up delay-320">
           <Card>
             <CardHeader>
-              <CardTitle>Experience</CardTitle>
+              <CardTitle>Seminars & Conferences</CardTitle>
               <CardDescription>
-                Professional, academic, and volunteer experiences that demonstrate practical skills.
+                Conference and seminar participation aligned with IT and engineering growth.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-7">
-              {experiences.map((exp) => (
-                <article key={`${exp.title}-${exp.period}`} className="space-y-2">
-                  <h3 className="text-base font-semibold text-foreground">{exp.title}</h3>
-                  <p className="text-sm font-medium text-[--brand]">{exp.organization}</p>
+              {seminarsAndConferences.map((item) => (
+                <article key={`${item.title}-${item.date}`} className="space-y-2 rounded-lg border border-border/80 bg-background/60 p-4">
+                  <h3 className="text-base font-semibold text-foreground">{item.title}</h3>
                   <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                    {exp.period}
+                    {item.date}
                   </p>
-                  <ul className="list-disc space-y-2 pl-5 text-sm text-muted-foreground">
-                    {exp.details.map((detail) => (
-                      <li key={detail}>{detail}</li>
-                    ))}
-                  </ul>
+                  <p className="text-sm font-medium text-[--brand]">{item.location}</p>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
                 </article>
               ))}
             </CardContent>
@@ -179,6 +176,33 @@ export default function Home() {
         </section>
 
         <section className="enter-up delay-420">
+          <Card>
+            <CardHeader>
+              <CardTitle>Certifications & Memberships</CardTitle>
+              <CardDescription>
+                Certificates and memberships earned through academic and professional participation.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              {certificationsMemberships.map((item) => (
+                <article
+                  key={`${item.title}-${item.subtitle}-${item.year}`}
+                  className="flex items-start justify-between gap-4 rounded-lg border border-border/80 bg-background/60 p-4"
+                >
+                  <div>
+                    <h3 className="text-base font-semibold text-foreground">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.subtitle}</p>
+                  </div>
+                  <p className="whitespace-nowrap text-sm font-semibold text-[--brand]">
+                    {item.year}
+                  </p>
+                </article>
+              ))}
+            </CardContent>
+          </Card>
+        </section>
+
+        <section className="enter-up delay-520">
           <Card>
             <CardHeader>
               <CardTitle>Projects & Portfolio</CardTitle>
