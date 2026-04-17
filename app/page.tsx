@@ -1,4 +1,12 @@
-import { CalendarDays, Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import {
+  CalendarDays,
+  Github,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Send,
+} from "lucide-react";
 import Image from "next/image";
 
 import { ModeToggle } from "@/components/mode-toggle";
@@ -25,6 +33,28 @@ export default function Home() {
   return (
     <div className="atmosphere-bg min-h-screen pb-14">
       <main className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-10">
+        <nav className="enter-up rounded-2xl border border-border/80 bg-[#0d1422] p-3 text-slate-200 shadow-sm">
+          <ul className="flex flex-wrap items-center justify-center gap-2 text-sm font-medium sm:gap-3 sm:text-base">
+            {[
+              { label: "About", href: "#about" },
+              { label: "Skills", href: "#skills" },
+              { label: "Seminars", href: "#seminars" },
+              { label: "Education", href: "#education" },
+              { label: "Projects", href: "#projects" },
+              { label: "Contact", href: "#contact" },
+            ].map((item) => (
+              <li key={item.label}>
+                <a
+                  href={item.href}
+                  className="inline-flex rounded-lg px-3 py-1.5 text-slate-300 transition-colors hover:bg-white/10 hover:text-white"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
         <header className="enter-up sticky top-3 z-20 rounded-2xl border border-border/90 bg-card/85 p-4 shadow-sm backdrop-blur md:p-5">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
@@ -47,7 +77,7 @@ export default function Home() {
           </div>
         </header>
 
-        <section className="enter-up delay-120 grid gap-6 md:grid-cols-[1.15fr_2fr]">
+        <section id="about" className="enter-up delay-120 grid gap-6 md:grid-cols-[1.15fr_2fr]">
           <Card>
             <CardContent className="space-y-4 p-6">
               <div className="mx-auto overflow-hidden rounded-xl border border-border/70 sm:mx-0">
@@ -111,7 +141,7 @@ export default function Home() {
           </Card>
         </section>
 
-        <section className="enter-up delay-220 grid gap-6 lg:grid-cols-2">
+        <section id="skills" className="enter-up delay-220 grid gap-6 lg:grid-cols-2">
           <Card>
             <CardHeader>
               <CardTitle>Skills & Technical Competencies</CardTitle>
@@ -127,6 +157,7 @@ export default function Home() {
           </Card>
 
           <Card>
+            <div id="education" className="relative -top-24" aria-hidden="true" />
             <CardHeader>
               <CardTitle>Education</CardTitle>
               <CardDescription>
@@ -152,7 +183,7 @@ export default function Home() {
           </Card>
         </section>
 
-        <section className="enter-up delay-320">
+        <section id="seminars" className="enter-up delay-320">
           <Card>
             <CardHeader>
               <CardTitle>Seminars & Conferences</CardTitle>
@@ -215,7 +246,7 @@ export default function Home() {
           </Card>
         </section>
 
-        <section className="enter-up delay-520">
+        <section id="projects" className="enter-up delay-520">
           <Card>
             <CardHeader>
               <CardTitle>Projects & Portfolio</CardTitle>
@@ -251,6 +282,78 @@ export default function Home() {
           </Card>
         </section>
 
+        <section id="contact" className="enter-up delay-520">
+          <Card className="border-border/90 bg-[#142238]/90 text-slate-100">
+            <CardHeader>
+              <CardTitle className="text-white">Get in Touch</CardTitle>
+              <CardDescription className="text-slate-300">
+                Send me a message for collaboration, internship opportunities, or project inquiries.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <form className="space-y-4">
+                <div className="grid gap-4 md:grid-cols-2">
+                  <div className="space-y-2">
+                    <label htmlFor="fullName" className="text-sm font-medium text-slate-200">
+                      Full Name
+                    </label>
+                    <input
+                      id="fullName"
+                      name="fullName"
+                      type="text"
+                      placeholder="Your name"
+                      className="w-full rounded-lg border border-slate-600/70 bg-slate-700/60 px-4 py-3 text-slate-100 placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--brand]"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="emailAddress" className="text-sm font-medium text-slate-200">
+                      Email Address
+                    </label>
+                    <input
+                      id="emailAddress"
+                      name="emailAddress"
+                      type="email"
+                      placeholder="Your email"
+                      className="w-full rounded-lg border border-slate-600/70 bg-slate-700/60 px-4 py-3 text-slate-100 placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--brand]"
+                    />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <label htmlFor="subject" className="text-sm font-medium text-slate-200">
+                    Subject
+                  </label>
+                  <input
+                    id="subject"
+                    name="subject"
+                    type="text"
+                    placeholder="Message subject"
+                    className="w-full rounded-lg border border-slate-600/70 bg-slate-700/60 px-4 py-3 text-slate-100 placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--brand]"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label htmlFor="message" className="text-sm font-medium text-slate-200">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={6}
+                    placeholder="Your message"
+                    className="w-full resize-y rounded-lg border border-slate-600/70 bg-slate-700/60 px-4 py-3 text-slate-100 placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--brand]"
+                  />
+                </div>
+                <Button
+                  type="submit"
+                  className="h-12 w-full bg-gradient-to-r from-blue-500 via-indigo-500 to-fuchsia-500 text-white hover:brightness-110"
+                >
+                  <Send className="mr-2 h-4 w-4" />
+                  Send Message
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </section>
+
         <section className="enter-up delay-520">
           <Card>
             <CardHeader>
@@ -279,6 +382,74 @@ export default function Home() {
             </CardContent>
           </Card>
         </section>
+
+        <footer className="enter-up delay-520 rounded-2xl border border-border/90 bg-card/85 p-6 shadow-sm">
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="space-y-3">
+              <h3 className="font-serif text-2xl font-semibold text-[--brand]">{profile.name}</h3>
+              <p className="text-sm text-muted-foreground">{profile.role}</p>
+              <div className="flex items-center gap-3">
+                <Button asChild variant="outline" size="icon">
+                  <a href={profile.social.github} target="_blank" rel="noreferrer" aria-label="GitHub profile">
+                    <Github className="h-4 w-4" />
+                  </a>
+                </Button>
+                <Button asChild variant="outline" size="icon">
+                  <a href={profile.social.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn profile">
+                    <Linkedin className="h-4 w-4" />
+                  </a>
+                </Button>
+                <Button asChild variant="outline" size="icon">
+                  <a href={`mailto:${profile.email}`} aria-label="Send email">
+                    <Mail className="h-4 w-4" />
+                  </a>
+                </Button>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+                Quick Links
+              </h4>
+              <ul className="mt-3 space-y-2 text-sm">
+                {[
+                  { label: "About", href: "#about" },
+                  { label: "Skills", href: "#skills" },
+                  { label: "Seminars", href: "#seminars" },
+                  { label: "Projects", href: "#projects" },
+                  { label: "Contact", href: "#contact" },
+                ].map((item) => (
+                  <li key={item.label}>
+                    <a href={item.href} className="text-muted-foreground transition-colors hover:text-foreground">
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+                Contact
+              </h4>
+              <div className="mt-3 space-y-2 text-sm">
+                <p className="flex items-center gap-2 text-muted-foreground">
+                  <Mail className="h-4 w-4 text-[--brand]" />
+                  {profile.email}
+                </p>
+                <p className="flex items-center gap-2 text-muted-foreground">
+                  <MapPin className="h-4 w-4 text-[--brand]" />
+                  {profile.location}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-6 border-t border-border/80 pt-4 text-xs text-muted-foreground sm:flex sm:items-center sm:justify-between">
+            <p>© 2026 {profile.name}. All rights reserved.</p>
+            <p className="mt-2 sm:mt-0">Made with care using Next.js and Tailwind CSS.</p>
+          </div>
+        </footer>
       </main>
     </div>
   );
