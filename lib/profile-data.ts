@@ -7,6 +7,8 @@ export const profile = {
   tagline:
     "Building modern interfaces with AI tools, thoughtful design systems, and reliable deployment workflows.",
   bio: "I'm an IT student at St. Paul University Philippines with a passion for full-stack web development and turning ideas into polished web experiences. My journey in tech started with a curiosity about how things work on the web, and has evolved into a commitment to building high-quality, user-centric applications - from fast prototypes to production-ready deployments. I specialize in creating responsive web applications using modern frameworks and technologies. With hands-on experience in Laravel, Next.js, Flutter, and v0.dev, I combine UI engineering skills with practical AI workflows to design and ship products quickly - blending creative direction with engineering discipline. My goal is to grow into a product engineer who can lead both frontend architecture and user experience strategy, contributing to open-source projects and sharing knowledge with the developer community along the way. When I'm not coding, I enjoy learning new technologies, exploring AI-assisted product building, and staying at the forefront of component-driven design.",
+  summary:
+    "I build responsive, user-centered applications using modern frameworks and AI-assisted workflows, with a long-term goal of leading frontend architecture and product experience.",
 
   social: {
     github: "https://github.com/emiisushi",
