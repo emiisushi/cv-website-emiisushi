@@ -46,7 +46,7 @@ export default function Home() {
           </div>
         </header>
 
-        <section className="enter-up grid gap-6 md:grid-cols-[1.15fr_2fr]" style={{ animationDelay: "120ms" }}>
+        <section className="enter-up delay-120 grid gap-6 md:grid-cols-[1.15fr_2fr]">
           <Card>
             <CardContent className="space-y-4 p-6">
               <div className="mx-auto overflow-hidden rounded-xl border border-border/70 sm:mx-0">
@@ -110,7 +110,7 @@ export default function Home() {
           </Card>
         </section>
 
-        <section className="enter-up grid gap-6 lg:grid-cols-2" style={{ animationDelay: "220ms" }}>
+        <section className="enter-up delay-220 grid gap-6 lg:grid-cols-2">
           <Card>
             <CardHeader>
               <CardTitle>Skills & Technical Competencies</CardTitle>
@@ -151,7 +151,7 @@ export default function Home() {
           </Card>
         </section>
 
-        <section className="enter-up" style={{ animationDelay: "320ms" }}>
+        <section className="enter-up delay-320">
           <Card>
             <CardHeader>
               <CardTitle>Experience</CardTitle>
@@ -178,7 +178,7 @@ export default function Home() {
           </Card>
         </section>
 
-        <section className="enter-up" style={{ animationDelay: "420ms" }}>
+        <section className="enter-up delay-420">
           <Card>
             <CardHeader>
               <CardTitle>Projects & Portfolio</CardTitle>
@@ -214,7 +214,7 @@ export default function Home() {
           </Card>
         </section>
 
-        <section className="enter-up" style={{ animationDelay: "520ms" }}>
+        <section className="enter-up delay-520">
           <Card>
             <CardHeader>
               <CardTitle>v0.dev AI Generation Process</CardTitle>

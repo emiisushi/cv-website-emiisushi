@@ -66,6 +66,26 @@ body {
   animation: enter-up 650ms ease-out both;
 }
 
+.delay-120 {
+  animation-delay: 120ms;
+}
+
+.delay-220 {
+  animation-delay: 220ms;
+}
+
+.delay-320 {
+  animation-delay: 320ms;
+}
+
+.delay-420 {
+  animation-delay: 420ms;
+}
+
+.delay-520 {
+  animation-delay: 520ms;
+}
+
 @keyframes enter-up {
   from {
     opacity: 0;
