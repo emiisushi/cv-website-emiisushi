@@ -86,6 +86,49 @@ body {
   animation-delay: 520ms;
 }
 
+.timeline-list {
+  padding-left: 1.2rem;
+}
+
+.timeline-item {
+  margin-left: 0.7rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -1.6rem;
+  top: 1.15rem;
+  width: 0.78rem;
+  height: 0.78rem;
+  border-radius: 999px;
+  background: var(--brand);
+  box-shadow:
+    0 0 0 3px color-mix(in oklab, var(--brand), transparent 78%),
+    0 0 14px color-mix(in oklab, var(--brand), transparent 55%);
+}
+
+.timeline-line {
+  position: absolute;
+  left: -1.24rem;
+  top: 2.05rem;
+  bottom: -2.05rem;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    color-mix(in oklab, var(--brand), transparent 30%),
+    color-mix(in oklab, var(--brand), transparent 76%)
+  );
+}
+
+.cert-item {
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.cert-item:hover {
+  border-color: var(--brand);
+  transform: translateY(-1px);
+}
+
 @keyframes enter-up {
   from {
     opacity: 0;

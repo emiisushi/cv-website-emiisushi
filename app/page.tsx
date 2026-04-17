@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { CalendarDays, Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 
 import { ModeToggle } from "@/components/mode-toggle";
@@ -160,17 +160,30 @@ export default function Home() {
                 Conference and seminar participation aligned with IT and engineering growth.
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-7">
-              {seminarsAndConferences.map((item) => (
-                <article key={`${item.title}-${item.date}`} className="space-y-2 rounded-lg border border-border/80 bg-background/60 p-4">
-                  <h3 className="text-base font-semibold text-foreground">{item.title}</h3>
-                  <p className="text-xs uppercase tracking-wide text-muted-foreground">
-                    {item.date}
-                  </p>
-                  <p className="text-sm font-medium text-[--brand]">{item.location}</p>
-                  <p className="text-sm text-muted-foreground">{item.description}</p>
-                </article>
-              ))}
+            <CardContent>
+              <div className="timeline-list space-y-6">
+                {seminarsAndConferences.map((item, index) => (
+                  <article
+                    key={`${item.title}-${item.date}`}
+                    className="timeline-item relative rounded-xl border border-border/80 bg-background/55 p-4 md:p-5"
+                  >
+                    <span className="timeline-dot" aria-hidden="true" />
+                    <h3 className="text-base font-semibold text-foreground">{item.title}</h3>
+                    <p className="mt-2 flex items-center gap-2 text-sm font-semibold text-foreground/90">
+                      <CalendarDays className="h-4 w-4 text-[--brand]" />
+                      {item.date}
+                    </p>
+                    <p className="mt-1 flex items-center gap-2 text-sm font-medium text-muted-foreground">
+                      <MapPin className="h-4 w-4 text-[--brand]" />
+                      {item.location}
+                    </p>
+                    <p className="mt-2 text-sm text-muted-foreground">{item.description}</p>
+                    {index !== seminarsAndConferences.length - 1 ? (
+                      <span className="timeline-line" aria-hidden="true" />
+                    ) : null}
+                  </article>
+                ))}
+              </div>
             </CardContent>
           </Card>
         </section>
@@ -187,13 +200,13 @@ export default function Home() {
               {certificationsMemberships.map((item) => (
                 <article
                   key={`${item.title}-${item.subtitle}-${item.year}`}
-                  className="flex items-start justify-between gap-4 rounded-lg border border-border/80 bg-background/60 p-4"
+                  className="cert-item flex items-start justify-between gap-4 rounded-xl border border-border/80 bg-background/55 px-4 py-3 md:px-5"
                 >
                   <div>
                     <h3 className="text-base font-semibold text-foreground">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.subtitle}</p>
                   </div>
-                  <p className="whitespace-nowrap text-sm font-semibold text-[--brand]">
+                  <p className="whitespace-nowrap pt-1 text-sm font-semibold text-[--brand]">
                     {item.year}
                   </p>
                 </article>
